@@ -13,6 +13,11 @@ const NavLinks = () => {
           Users
         </NavLink>
       </li>
+      <li>
+        <NavLink to="/products" end>
+          Products
+        </NavLink>
+      </li>
     </ul>
   );
 };
