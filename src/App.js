@@ -5,7 +5,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import NavBar from "./shared/components/navigation/NavBar";
 import Users from "./users/pages/Users";
 import Products from "./products/pages/Products";
-import MainImage from "./main/MainImage";
+import MainImage from "./home/MainImage";
 import Collections from "./collections/components/pages/Fashions";
 import ProductDetail from "./products/pages/ProductDetail";
 import Login from "./users/pages/Login";

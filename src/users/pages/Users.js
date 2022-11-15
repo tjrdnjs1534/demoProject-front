@@ -1,18 +1,28 @@
+import { useEffect } from "react";
+import { useState } from "react";
 import UserList from "../components/UserList";
 const Users = () => {
-    const DUMMY_USERS = [
-        {
-            id : 'u1',
-            name : "jang seok won"
-        },
-        {
-            id: 'u2',
-            name : "jang seok jun"
-        }
-
-    ]
+     const[users,setUsers]=useState([]);
+    // const fetchUserHandler = () =>{
+    //     fetch("http://localhost:3000/users").then(response =>{
+    //         return response.json()
+    //     }).then(data =>{
+    //         // const transformedUsers = data.results
+    //         setUsers(data)
+    //         console.log(data);
+    //     }) 
+    // } 
+    useEffect(() =>{
+        fetch("http://localhost:3000/users").then(response =>{
+            return response.json()
+        }).then(data =>{
+            setUsers(data)
+        }) 
+    } ,[])
     return (
-        <UserList items={DUMMY_USERS} />
+        <div>
+            <UserList items={users} />
+        </div>
     );
 }
 

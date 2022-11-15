@@ -14,6 +14,7 @@ const Detail = (props) => {
         {price}
         <button>wishlist</button>
         <button>purchase</button>
+        <button>edit</button>
       </div>
       <div></div>
     </div>
